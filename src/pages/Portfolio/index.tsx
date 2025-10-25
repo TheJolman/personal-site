@@ -84,31 +84,37 @@ export function Portfolio() {
 
   return (
     <>
-      {links.map((link) => (
-        <a href={link.href} className="link mr-1">
-          {link.content}
-        </a>
-      ))}
 
-      {projects.map((project) => (
-        <ProjectCard
-          title={project.title}
-          description={project.description}
-          technologies={project.technologies}
-          liveLink={project.liveLink}
-          githubLink={project.githubLink}
-        />
-      ))}
+      <div className="flex justify-center">
+        {links.map((link) => (
+          <a href={link.href} className="link mr-2">
+            {link.content}
+          </a>
+        ))}
 
-      {myData.map((category) => (
-        <div className="collapse collapse-arrow bg-base-100 border border-base-300">
-          <input type="radio" name="my-accordian-2" defaultChecked />
-          <div className="collapse-title font-semibold">{category.title}</div>
-          <div className="collapse-content text-sm"> {category.content.map((item) => (
-            <li>{item}</li>
-          ))}</div>
-        </div>
-      ))}
+      </div>
+
+      <div className="max-w-screen-md mx-auto flex flex-col items-center justify-center gap-4 mb-20">
+        {projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            liveLink={project.liveLink}
+            githubLink={project.githubLink}
+          />
+        ))}
+
+        {myData.map((category) => (
+          <div className="collapse collapse-arrow bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordian-2" defaultChecked />
+            <div className="collapse-title font-semibold">{category.title}</div>
+            <div className="collapse-content text-md ml-4"> {category.content.map((item) => (
+              <li>{item}</li>
+            ))}</div>
+          </div>
+        ))}
+      </div>
     </>
   )
 }
