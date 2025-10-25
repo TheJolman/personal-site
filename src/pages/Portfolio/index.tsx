@@ -36,6 +36,37 @@ export function Portfolio() {
     },
   ];
 
+  const myData = [
+    {
+      title: "Relevant Coursework",
+      content: [
+        "Artifical Intelligence",
+        "Machine Learning",
+        "Data Science",
+        "Database Systems",
+        "Operating Systems",
+      ],
+    },
+    {
+      title: "Technical Interests",
+      content: [
+        "Programming Languages and Compilers",
+        "Linux and Operating Systems",
+        "DevOps",
+        "System Administration",
+      ],
+    },
+    {
+      title: "Technical Skills",
+      content: [
+        "Python, C/C++, Java, Go, Lua, bash, SQL, Matlab",
+        "Django, FastAPI, Python DS/ML libraries",
+        "Nix/NixOS, Linux, Docker",
+        "GitHub Actions, Vim",
+      ],
+    },
+  ];
+
   const links = [
     {
       href: "https://www.github.com/TheJolman",
@@ -67,6 +98,16 @@ export function Portfolio() {
           liveLink={project.liveLink}
           githubLink={project.githubLink}
         />
+      ))}
+
+      {myData.map((category) => (
+        <div className="collapse collapse-arrow bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordian-2" defaultChecked />
+          <div className="collapse-title font-semibold">{category.title}</div>
+          <div className="collapse-content text-sm"> {category.content.map((item) => (
+            <li>{item}</li>
+          ))}</div>
+        </div>
       ))}
     </>
   )
