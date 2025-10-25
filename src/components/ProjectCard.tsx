@@ -6,7 +6,7 @@ interface ProjectCardProps {
   githubLink: string;
 }
 
-export default function ProjectCard(
+export function ProjectCard(
   { title, description, technologies, liveLink, githubLink }: ProjectCardProps,
 ) {
   return (
@@ -18,7 +18,7 @@ export default function ProjectCard(
 
         <div className="card-actions justify-end">
           {liveLink && (
-            <a href={liveLink}>
+            <a href={liveLink} className="btn btn-secondary">
               🌐 Live Demo
             </a>
           )

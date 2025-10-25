@@ -1,3 +1,5 @@
+import { ProjectCard } from '../../components/ProjectCard'
+
 export function Portfolio() {
   const projects = [
     {
@@ -6,7 +8,6 @@ export function Portfolio() {
         "API in development for club to manage data about board members, announcements, and events. Created CI pipeline and branch protection rules to enable safe collaboration with a team.",
       technologies: "Go, Gin, SQLite, OpenAPI, Nix, GitHub Actions",
       githubLink: "https://github.com/acmcsufoss/api.acmcsuf.com",
-      liveLink: "",
     },
     {
       title: "Playlist Rating Web App: Dumps or Fire",
@@ -35,7 +36,38 @@ export function Portfolio() {
     },
   ];
 
+  const links = [
+    {
+      href: "https://www.github.com/TheJolman",
+      content: "My Github",
+    },
+    {
+      href: "https://www.linkedin.com/in/joshua-holman-685a39244/",
+      content: "My Linkedin",
+    },
+    {
+      href: "/resume",
+      content: "My Resume",
+    },
+  ];
+
   return (
-    <p className="mt-10">hiasfsadfasdfasdfasdfasfasf</p>
+    <>
+      {links.map((link) => (
+        <a href={link.href} className="link mr-1">
+          {link.content}
+        </a>
+      ))}
+
+      {projects.map((project) => (
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          technologies={project.technologies}
+          liveLink={project.liveLink}
+          githubLink={project.githubLink}
+        />
+      ))}
+    </>
   )
 }
