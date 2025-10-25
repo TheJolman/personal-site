@@ -83,18 +83,18 @@ export function Portfolio() {
   ];
 
   return (
-    <>
+    <div className="max-w-screend-md mx-auto flex flex-col items-center justrify-center">
 
       <div className="flex justify-center">
         {links.map((link) => (
-          <a href={link.href} className="link mr-2">
+          <a href={link.href} className="link mx-1">
             {link.content}
           </a>
         ))}
 
       </div>
 
-      <div className="max-w-screen-md mx-auto flex flex-col items-center justify-center gap-4 mb-20">
+      <div className="max-w-screen-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
         {projects.map((project) => (
           <ProjectCard
             title={project.title}
@@ -115,6 +115,6 @@ export function Portfolio() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }
