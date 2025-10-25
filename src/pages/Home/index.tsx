@@ -1,6 +1,26 @@
 import { Navbar } from '../../components/Navbar';
 
 export function Home() {
+	const buttons = [
+		{
+			href: "/portfolio",
+			content: "Portfolio"
+		},
+		{
+			href: "/resume",
+			content: "Resume"
+		},
+		{
+			href: "/about",
+			content: "About"
+		},
+		{
+			href: "/tutoring",
+			content: "Tutoring"
+		},
+	];
+
+
 	return (
 		<>
 			<head>
@@ -18,18 +38,19 @@ export function Home() {
 				</div>
 
 				<div className="w-full px-6 mb-6">
-					<div className="rounded-lg p-6 border shadow-sm text-center">
+					<div className="rounded-lg p-6 border shadow-sm text-center mb-4">
 						<p>
 							Welcome to my personal website. Explore my portfolio, learn about
 							my background, or get in touch about tutoring services.
 						</p>
 					</div>
+					<div className="flex flex-col items-center rounded-lg p-6 border shadow-sm text-center">
+						{buttons.map((button) => (
+							<a href={button.href} className="btn btn-wide shadow-md border mb-4">{button.content}</a>
+						))}
+					</div>
 				</div>
 
-				<a href="/portfolio" className="btn btn-wide mb-4">Portfolio</a>
-				<button className="btn btn-wide mb-4">Resume</button>
-				<button className="btn btn-wide mb-4">About</button>
-				<button className="btn btn-wide">Tutoring</button>
 			</div>
 		</>
 	);
