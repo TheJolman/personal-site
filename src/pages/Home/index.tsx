@@ -26,7 +26,7 @@ export function Home() {
 					</div>
 				</div>
 
-				<button className="btn btn-wide mb-4">Portfolio</button>
+				<a href="/portfolio" className="btn btn-wide mb-4">Portfolio</a>
 				<button className="btn btn-wide mb-4">Resume</button>
 				<button className="btn btn-wide mb-4">About</button>
 				<button className="btn btn-wide">Tutoring</button>
