@@ -31,7 +31,7 @@ export function Home() {
 						Hello! I'm Josh Holman
 					</h1>
 					<p className="mb-6">
-						Computer Science Student & Software Developer
+						Student | Software Developer | Tutor
 					</p>
 				</div>
 
