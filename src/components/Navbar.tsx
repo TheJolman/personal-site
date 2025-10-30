@@ -1,4 +1,5 @@
 import { buttons } from "../constants/buttons";
+import { ThemeToggler } from "./ThemeToggler";
 
 export function Navbar() {
   return (
@@ -8,6 +9,7 @@ export function Navbar() {
           Josh Holman
         </a>
       </div>
+
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {buttons.map((button) => (
@@ -17,7 +19,9 @@ export function Navbar() {
           ))}
         </ul>
       </div>
+
       <div className="navbar-end">
+        <ThemeToggler />
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -47,6 +51,7 @@ export function Navbar() {
           </ul>
         </div>
       </div>
+
     </div>
   );
 }
