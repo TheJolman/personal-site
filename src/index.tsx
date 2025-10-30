@@ -1,10 +1,10 @@
 import { LocationProvider, Router, Route, hydrate, prerender as ssr } from 'preact-iso';
 
-import { Navbar } from './components/Navbar.jsx';
-import { Home } from './pages/Home/index.jsx';
-import { Portfolio } from './pages/Portfolio/index.jsx';
-import { About } from './pages/About/index.jsx';
-import { NotFound } from './pages/_404.jsx';
+import { Navbar } from './components/Navbar';
+import { Home } from './pages/Home/index';
+import { Portfolio } from './pages/Portfolio/index';
+import { About } from './pages/About/index';
+import { NotFound } from './pages/_404';
 import './style.css';
 
 export function App() {
