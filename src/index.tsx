@@ -5,6 +5,7 @@ import { Home } from './pages/Home/index';
 import { Portfolio } from './pages/Portfolio/index';
 import { About } from './pages/About';
 import { Resume } from './pages/Resume';
+import { Tutoring } from './pages/Tutoring';
 import { NotFound } from './pages/_404';
 import './style.css';
 
@@ -18,6 +19,7 @@ export function App() {
 					<Route path="/portfolio" component={Portfolio} />
 					<Route path="/about" component={About} />
 					<Route path="/resume" component={Resume} />
+					<Route path="/tutoring" component={Tutoring} />
 					<Route default component={NotFound} />
 				</Router>
 			</main>
