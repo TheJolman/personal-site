@@ -83,20 +83,19 @@ export function Portfolio() {
   ];
 
   return (
-    <div className="max-w-screend-md mx-auto flex flex-col items-center justrify-center">
-
-      <div className="flex justify-center">
+    <div className="max-w-screend-md mx-auto flex flex-col items-center justify-center">
+      <div className="flex justify-center my-4 gap-4">
         {links.map((link) => (
-          <a href={link.href} className="link mx-1">
+          <a href={link.href} key={link.href} className="btn btn-primary">
             {link.content}
           </a>
         ))}
-
       </div>
 
-      <div className="max-w-screen-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
+      <div className="max-w-screen-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
         {projects.map((project) => (
           <ProjectCard
+            key={project.title}
             title={project.title}
             description={project.description}
             technologies={project.technologies}
@@ -104,17 +103,32 @@ export function Portfolio() {
             githubLink={project.githubLink}
           />
         ))}
+      </div>
 
-        {myData.map((category) => (
-          <div className="collapse collapse-arrow bg-base-100 border border-base-300">
-            <input type="radio" name="my-accordian-2" defaultChecked />
+      <div className="w-full max-w-md mx-auto">
+        {myData.map((category, index) => (
+          <div
+            key={category.title}
+            className="collapse collapse-arrow bg-base-100 border border-base-300"
+          >
+            <input
+              type="radio"
+              name="my-accordian-2"
+              defaultChecked={index === 0}
+            />
             <div className="collapse-title font-semibold">{category.title}</div>
-            <div className="collapse-content text-md ml-4"> {category.content.map((item) => (
-              <li>{item}</li>
-            ))}</div>
+            <div className="collapse-content text-md ml-4">
+              <div className="min-h-[10rem]">
+                <ul>
+                  {category.content.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }

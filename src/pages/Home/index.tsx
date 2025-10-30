@@ -1,24 +1,6 @@
+import { buttons } from "../../constants/buttons";
+
 export function Home() {
-	const buttons = [
-		{
-			href: "/portfolio",
-			content: "Portfolio"
-		},
-		{
-			href: "/resume",
-			content: "Resume"
-		},
-		{
-			href: "/about",
-			content: "About"
-		},
-		{
-			href: "/tutoring",
-			content: "Tutoring"
-		},
-	];
-
-
 	return (
 		<>
 			<head>
