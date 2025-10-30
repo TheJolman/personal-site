@@ -3,6 +3,7 @@ import { LocationProvider, Router, Route, hydrate, prerender as ssr } from 'prea
 import { Navbar } from './components/Navbar.jsx';
 import { Home } from './pages/Home/index.jsx';
 import { Portfolio } from './pages/Portfolio/index.jsx';
+import { About } from './pages/About/index.jsx';
 import { NotFound } from './pages/_404.jsx';
 import './style.css';
 
@@ -14,6 +15,7 @@ export function App() {
 				<Router>
 					<Route path="/" component={Home} />
 					<Route path="/portfolio" component={Portfolio} />
+					<Route path="/about" component={About} />
 					<Route default component={NotFound} />
 				</Router>
 			</main>
