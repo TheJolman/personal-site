@@ -15,15 +15,16 @@ export function ThemeToggler() {
 
   return (
     <label className="flex items-center gap-2 cursor-pointer">
-      <Moon size={18}/>
+      <Moon size={18} />
       <input type="checkbox"
         onClick={toggleTheme}
+        defaultChecked={false}
         checked={theme === 'caramellatte'}
         className="toggle"
         data-toggle-theme="coffee,caramellatte"
         data-act-class="ACTIVECLASS"
       />
-      <Sun size={18}/>
+      <Sun size={18} />
     </label>
   )
 }
