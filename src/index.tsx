@@ -1,6 +1,7 @@
 import { LocationProvider, Router, Route, hydrate, prerender as ssr } from 'preact-iso';
 
 import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
 import { Home } from './pages/Home/index';
 import { Portfolio } from './pages/Portfolio/index';
 import { About } from './pages/About';
@@ -23,6 +24,7 @@ export function App() {
 					<Route default component={NotFound} />
 				</Router>
 			</main>
+			<Footer />
 		</LocationProvider>
 	);
 }
