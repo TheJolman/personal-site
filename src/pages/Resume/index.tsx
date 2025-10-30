@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'preact/hooks';
-import Markdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import 'github-markdown-css/github-markdown.css';
 
 export function Resume() {
   const [markdown, setMarkdown] = useState('');
@@ -24,8 +23,8 @@ export function Resume() {
           Download PDF
         </a>
       </div>
-      <main className="markdown-body p-4">
-        <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
+      <main className="prose p-4">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
       </main>
     </div>
   );

@@ -1,38 +1,33 @@
 import { buttons } from "../../constants/buttons";
 
 export function Home() {
-	return (
-		<>
-			<head>
-				<title>Josh Holman - CS Student & Math Tutor</title>
-			</head>
-
-			<div className="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-				<div className="p-4 text-center">
-					<h1 className="text-2xl font-bold mb-4">
-						Hello! I'm Josh Holman
-					</h1>
-					<p className="mb-6">
-						Student | Software Developer | Tutor
-					</p>
-				</div>
-
-				<div className="w-full px-6 mb-6">
-					<div className="rounded-lg p-6 border shadow-sm text-center mb-4">
-						<p>
-							Welcome to my personal website. Explore my portfolio, learn about
-							my background, or get in touch about tutoring services.
-						</p>
-					</div>
-					<div className="flex flex-col items-center rounded-lg p-6 border shadow-sm text-center gap-4">
-						{buttons.map((button) => (
-							<a href={button.href} className="btn btn-wide shadow-md border">{button.content}</a>
-						))}
-					</div>
-				</div>
-
-			</div>
-		</>
-	);
+  return (
+    <>
+      <head>
+        <title>Josh Holman - CS Student & Math Tutor</title>
+      </head>
+      <div className="hero min-h-[calc(100vh-10rem)] bg-base-200">
+        <div className="hero-content text-center">
+          <div className="max-w-md">
+            <h1 className="text-5xl font-bold">Hello there</h1>
+            <p className="py-6">
+              I'm Josh Holman, a Computer Science student, software developer,
+              and math tutor. Welcome to my little corner of the internet.
+            </p>
+            <div className="flex flex-col items-center gap-4">
+              {buttons.map((button) => (
+                <a
+                  href={button.href}
+                  className="btn btn-primary btn-wide"
+                  key={button.href}
+                >
+                  {button.content}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
-
