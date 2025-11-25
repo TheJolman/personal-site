@@ -6,7 +6,7 @@ export function Home() {
       <head>
         <title>Josh Holman - CS Student & Math Tutor</title>
       </head>
-      <div className="hero min-h-[calc(100vh-10rem)] bg-base-200">
+      <div className="hero min-h-[calc(100vh-10rem)]">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">Hello there</h1>
