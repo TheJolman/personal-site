@@ -6,7 +6,7 @@ export function Footer() {
           Copyright @ {new Date().getFullYear()} - All rights reserved by Josh Holman
         </p>
         <a
-          href="https://github.com/thejolman/personal-site"
+          href="https://github.com/thejolman/www.jolman.me"
           className="link link-hover"
           target="_blank"
           rel="noopener noreferrer"
