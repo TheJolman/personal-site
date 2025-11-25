@@ -10,7 +10,7 @@ export function About() {
         </div>
 
         <div className="w-full px-6">
-          <div className="rounded-lg p-6 mb-6 border shadow-sm">
+          <div className="rounded-lg p-6 mb-6 border shadow-sm bg-base-200">
             <h2 className="text-xl font-bold mb-4">Background</h2>
             <p className="mb-4">
               I first attended college at El Camino Community College in
@@ -51,7 +51,7 @@ export function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-lg p-6 border">
+            <div className="rounded-lg p-6 border bg-base-200">
               <h2 className="text-xl font-bold mb-4">Interests</h2>
               <ul className="space-y-2">
                 <li>• Programming of all kinds</li>
@@ -62,7 +62,7 @@ export function About() {
               </ul>
             </div>
 
-            <div className="rounded-lg p-6 border">
+            <div className="rounded-lg p-6 border bg-bas-200">
               <h2 className="text-xl font-bold mb-4">Experience</h2>
               <p className="mb-3">
                 I've worked a few different, unrelated jobs. First as a hospital

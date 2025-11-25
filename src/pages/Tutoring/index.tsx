@@ -1,7 +1,7 @@
 export function Tutoring() {
   return (
     <>
-      <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
+      <div class="max-w-3xl mx-auto flex flex-col items-center justify-center">
         <div class="p-4 text-center">
           <h1 class="text-2xl font-bold mb-6">Math Tutoring</h1>
           <p class="font-bold mb-6">
@@ -11,7 +11,7 @@ export function Tutoring() {
         </div>
 
         <div class="w-full px-6">
-          <div class="rounded-lg p-6 mb-6 border">
+          <div class="rounded-lg p-6 mb-6 border bg-base-200">
             <h2 class="text-xl font-bold mb-4">
               Contact & Availability
             </h2>
@@ -37,7 +37,7 @@ export function Tutoring() {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="rounded-lg p-6 border shadow-sm">
+            <div class="rounded-lg p-6 border shadow-sm bg-base-200">
               <h2 class="text-xl font-bold mb-4">Rates</h2>
               <p class="">
                 <span class="font-semibold">$25</span> for sessions up to 1 hour
@@ -48,7 +48,7 @@ export function Tutoring() {
               </p>
             </div>
 
-            <div class="rounded-lg p-6 border shadow-sm">
+            <div class="rounded-lg p-6 border shadow-sm bg-base-200">
               <h2 class="text-xl font-bold mb-4">Topics Offered</h2>
               <p class="mb-3">
                 All K-12 mathematics topics including:
