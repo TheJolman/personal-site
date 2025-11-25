@@ -13,9 +13,10 @@ import './style.css';
 export function App() {
 	return (
 		<LocationProvider>
-			<Navbar />
-			<main>
-				<Router>
+			<div className="flex flex-col min-h-screen">
+				<Navbar />
+				<main className="flex-grow">
+					<Router>
 					<Route path="/" component={Home} />
 					<Route path="/portfolio" component={Portfolio} />
 					<Route path="/about" component={About} />
@@ -23,8 +24,9 @@ export function App() {
 					<Route path="/tutoring" component={Tutoring} />
 					<Route default component={NotFound} />
 				</Router>
-			</main>
-			<Footer />
+				</main>
+				<Footer />
+			</div>
 		</LocationProvider>
 	);
 }
