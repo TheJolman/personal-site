@@ -3,7 +3,7 @@ import { ThemeToggler } from "./ThemeToggler";
 
 export function Navbar() {
   return (
-    <div className="navbar bg-base-200 shadow-xl">
+    <div className="navbar bg-neutral text-neutral-content shadow-xl">
       <div className="navbar-start">
         <a href="/" className="btn btn-ghost text-xl">
           Josh Holman
@@ -41,7 +41,7 @@ export function Navbar() {
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {buttons.map((button) => (
               <li key={button.href}>

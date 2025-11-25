@@ -1,7 +1,7 @@
 export function About() {
   return (
     <>
-      <div className="max-w-screen-md mx-auto flex flex-col items-center justify-center">
+      <div className="max-w-3xl mx-auto flex flex-col items-center justify-center">
         <div className="p-4 text-center">
           <h1 className="text-2xl font-bold mb-6">About Me</h1>
           <p className="font-bold mb-6">
