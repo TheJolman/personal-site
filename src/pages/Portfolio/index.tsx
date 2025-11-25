@@ -92,7 +92,7 @@ export function Portfolio() {
         ))}
       </div>
 
-      <div className="max-w-screen-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+      <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -105,11 +105,11 @@ export function Portfolio() {
         ))}
       </div>
 
-      <div className="w-full max-w-md mx-auto">
+      <div className="w-full max-w-md mx-auto mb-10">
         {myData.map((category, index) => (
           <div
             key={category.title}
-            className="collapse collapse-arrow bg-base-100 border border-base-300"
+            className="collapse collapse-arrow bg-base-200 border border-base-300"
           >
             <input
               type="radio"
@@ -118,7 +118,7 @@ export function Portfolio() {
             />
             <div className="collapse-title font-semibold">{category.title}</div>
             <div className="collapse-content text-md ml-4">
-              <div className="min-h-[10rem]">
+              <div className="min-h-40">
                 <ul>
                   {category.content.map((item) => (
                     <li key={item}>{item}</li>
